@@ -3,10 +3,10 @@ const mysql = require('mysql2/promise');
 const is_hosted = process.env.IS_HOSTED || false;
 
 const dbConfigHosted = {
-	host: "host",
-	user: "user",
-	password: "password",
-	database: "database",
+	host: process.env.DB_HOST,
+	user: process.env.DB_USER,
+	password: process.env.DB_PASSWORD,
+	database: process.env.DB_DATABASE,
 	multipleStatements: false,
 	namedPlaceholders: true
 };
@@ -14,8 +14,8 @@ const dbConfigHosted = {
 const dbConfigLocal = {
 	host: "localhost",
 	user: "root",
-	password: "Password",
-	database: "database1",
+	password: "#Unlimited*7",
+	database: "web_user",
 	multipleStatements: false,
 	namedPlaceholders: true
 };
