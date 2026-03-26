@@ -1,7 +1,7 @@
 const mysql = require("mysql2/promise");
 require("dotenv").config();
 
-// const is_hosted = process.env.IS_HOSTED === true;
+const is_hosted = process.env.IS_HOSTED === true;
 
 const dbConfigHosted = {
   host: process.env.DB_HOST,
@@ -27,6 +27,9 @@ const dbConfigHosted = {
 // } else {
 //   var database = mysql.createPool(dbConfigLocal);
 // }
+
+
 var database = mysql.createPool(dbConfigHosted);
 
 module.exports = database;
+
